@@ -45,14 +45,18 @@ namespace MathExtentions
             }
             return (stop - start) / stepCount;
         }
-        public double GetStepCount(double start, double stop, double step)
+        public int GetStepCount(double start, double stop, double step)
         {
             if (start > stop)
             {
                 throw new InvalidOperationException("Конец отрезка доллжен быть больше его начала");
             }
+            if (((stop - start) % step))
+            {
+
+            }
             return (stop - start) / step;
         }
-        public List
+        public List<double> GetSteps()
     }
 }
